@@ -26,10 +26,9 @@ def directors_totals(nds)
     while column_index < nds[row_index][:movies].length do
       total_gross += nds[row_index][:movies][column_index][:worldwide_gross]
     end
-    result = { nds[row_index[:name] => total_gross]
+    result[nds[row_index[:name]] = total_gross
   end
-  
+  result
 end
 
-pp directors_database
 directors_totals(directors_database)
